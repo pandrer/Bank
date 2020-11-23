@@ -1,0 +1,277 @@
+services:
+  backendgw:
+    build:
+      context: C:\Users\pandr\source\repos\Bank
+      dockerfile: src/gateways/BackendGateway/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: BackendGateway
+      target: base
+    container_name: BackendGateway
+    depends_on:
+      catalog:
+        condition: service_started
+      identity:
+        condition: service_started
+      mongo:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: backendgw:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/BackendGateway.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 44359
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\pandr\source\repos\Bank\src\gateways\BackendGateway:/app:rw
+    - C:\Users\pandr\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\pandr\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\pandr\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\pandr\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\pandr\source\repos\Bank:/src:rw
+  cart:
+    build:
+      context: C:\Users\pandr\source\repos\Bank
+      dockerfile: src/microservices/CartMicroservice/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: CartMicroservice
+      target: base
+    container_name: CartMicroservice
+    depends_on:
+      mongo:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: cart:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/CartMicroservice.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 44388
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\pandr\source\repos\Bank\src\microservices\CartMicroservice:/app:rw
+    - C:\Users\pandr\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\pandr\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\pandr\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\pandr\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\pandr\source\repos\Bank:/src:rw
+  catalog:
+    build:
+      context: C:\Users\pandr\source\repos\Bank
+      dockerfile: src/microservices/CatalogMicroservice/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: CatalogMicroservice
+      target: base
+    container_name: CatalogMicroservice
+    depends_on:
+      mongo:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: catalog:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/CatalogMicroservice.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 44326
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\pandr\source\repos\Bank\src\microservices\CatalogMicroservice:/app:rw
+    - C:\Users\pandr\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\pandr\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\pandr\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\pandr\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\pandr\source\repos\Bank:/src:rw
+  core:
+    build:
+      context: C:\Users\pandr\source\repos\Bank
+      dockerfile: src/microservices/CoreMicroservice/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: CoreMicroservice
+      target: base
+    container_name: CoreMicroservice
+    depends_on:
+      mongo:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: core:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/CoreMicroservice.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 44399
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\pandr\source\repos\Bank\src\microservices\CoreMicroservice:/app:rw
+    - C:\Users\pandr\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\pandr\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\pandr\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\pandr\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\pandr\source\repos\Bank:/src:rw
+  customer:
+    build:
+      context: C:\Users\pandr\source\repos\Bank
+      dockerfile: src/microservices/CustomersMicroservice/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: CustomersMicroservice
+      target: base
+    container_name: CustomersMicroservice
+    depends_on:
+      mongo:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: customer:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/CustomersMicroservice.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 44398
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\pandr\source\repos\Bank\src\microservices\CustomersMicroservice:/app:rw
+    - C:\Users\pandr\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\pandr\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\pandr\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\pandr\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\pandr\source\repos\Bank:/src:rw
+  frontendgw:
+    build:
+      context: C:\Users\pandr\source\repos\Bank
+      dockerfile: src/gateways/FrontendGateway/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: FrontendGateway
+      target: base
+    container_name: FrontendGateway
+    depends_on:
+      cart:
+        condition: service_started
+      catalog:
+        condition: service_started
+      identity:
+        condition: service_started
+      mongo:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: frontendgw:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/FrontendGateway.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 44300
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\pandr\source\repos\Bank\src\gateways\FrontendGateway:/app:rw
+    - C:\Users\pandr\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\pandr\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\pandr\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\pandr\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\pandr\source\repos\Bank:/src:rw
+  identity:
+    build:
+      context: C:\Users\pandr\source\repos\Bank
+      dockerfile: src/microservices/IdentityMicroservice/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: IdentityMicroservice
+      target: base
+    container_name: IdentityMicroservice
+    depends_on:
+      mongo:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: identity:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/IdentityMicroservice.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 44397
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\pandr\source\repos\Bank\src\microservices\IdentityMicroservice:/app:rw
+    - C:\Users\pandr\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\pandr\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\pandr\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\pandr\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\pandr\source\repos\Bank:/src:rw
+  mongo:
+    container_name: store.mongo
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+version: '3.4'

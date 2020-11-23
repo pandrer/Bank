@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "z1R4iuhU0kcIzJHsPSRxlUSqVpd1B5ud0mmoGdP9wAeaC1iIEo2VK1i15diJippZaJTCzqr4Oc3mS5aIXPhHww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\uis\\Frontend\\Frontend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pandr\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
