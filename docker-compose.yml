@@ -13,14 +13,6 @@ services:
     depends_on:
       - mongo
 
-  cart:
-    image: ${DOCKER_REGISTRY-}cart
-    build:
-      context: .
-      dockerfile: src/microservices/CartMicroservice/Dockerfile
-    depends_on:
-      - mongo
-
   customer:
     image: ${DOCKER_REGISTRY-}customer
     build:

@@ -10,10 +10,6 @@ services:
     ports:
       - "44326:80"
 
-  cart:
-    ports:
-      - "44388:80"
-
   customer:
     ports:
       - "44398:80"
