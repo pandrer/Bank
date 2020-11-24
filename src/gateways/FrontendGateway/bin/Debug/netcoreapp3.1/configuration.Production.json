@@ -33,22 +33,6 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/cart",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "cart",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/cart",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      }
-    },
-    {
       "DownstreamPathTemplate": "/api/identity/login",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [

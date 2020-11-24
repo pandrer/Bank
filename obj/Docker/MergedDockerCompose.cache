@@ -14,17 +14,6 @@ services:
     ports:
     - published: 44359
       target: 80
-  cart:
-    build:
-      context: C:\Users\pandr\source\repos\Bank
-      dockerfile: src/microservices/CartMicroservice/Dockerfile
-    depends_on:
-      mongo:
-        condition: service_started
-    image: cart
-    ports:
-    - published: 44388
-      target: 80
   catalog:
     build:
       context: C:\Users\pandr\source\repos\Bank
@@ -63,8 +52,6 @@ services:
       context: C:\Users\pandr\source\repos\Bank
       dockerfile: src/gateways/FrontendGateway/Dockerfile
     depends_on:
-      cart:
-        condition: service_started
       catalog:
         condition: service_started
       identity:

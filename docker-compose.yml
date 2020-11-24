@@ -45,7 +45,6 @@ services:
     depends_on:
       - mongo
       - catalog
-      - cart
       - identity
 
   backendgw:
