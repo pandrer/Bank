@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0OD15qbGmkFqARHhYJzgO0rWPtGjHcR0pmL4JqBRmnBPtgcDhKXGKNkhCi3aPM3HKnk7uTx8Q7iyqjJ2KOQy3A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\microservices\\FileManagerMicroservice\\FileManagerMicroservice.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\E4J2\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}

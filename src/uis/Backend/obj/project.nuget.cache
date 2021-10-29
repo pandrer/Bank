@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZmmjrIhWtkfxygQbMSOstKxTbIAmGQK9TjTT5YkE77n7202Ul3ANUMRt+0mPTNoq621eVFnv8oEFoO1fZLH1gQ==",
+  "dgSpecHash": "B5x5oVxnCYaFYQROZCIH3khzAonqx+tIrFKQ2DDMGgrASGdquWUMkuMZczz9CiadSGDpcDY2rhEuhGrbVZ8Bsw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\uis\\Backend\\Backend.csproj",
+  "projectFilePath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\uis\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\pandr\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+    "C:\\Users\\E4J2\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
   ],
   "logs": []
 }

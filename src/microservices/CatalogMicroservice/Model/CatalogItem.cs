@@ -7,8 +7,8 @@ namespace CatalogMicroservice.Model
         public static readonly string DocumentName = "catalogItems";
 
         public Guid Id { get; set; }
+        public CategoryItem Category { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
+        public string Value { get; set; }
     }
 }

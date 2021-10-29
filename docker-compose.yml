@@ -21,6 +21,13 @@ services:
     depends_on:
       - mongo
 
+  filemanager:
+    image: ${DOCKER_REGISTRY-}filemanager
+    build:
+      context: .
+      dockerfile: src/microservices/FileManagerMicroservice/Dockerfile
+
+
   identity:
     image: ${DOCKER_REGISTRY-}identity
     build:

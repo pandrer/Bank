@@ -3228,10 +3228,7 @@
         },
         "runtime": {
           "bin/placeholder/Middleware.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -9599,23 +9596,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pandr\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\E4J2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\microservices\\CoreMicroservice\\CoreMicroservice.csproj",
+      "projectUniqueName": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\microservices\\CoreMicroservice\\CoreMicroservice.csproj",
       "projectName": "CoreMicroservice",
-      "projectPath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\microservices\\CoreMicroservice\\CoreMicroservice.csproj",
-      "packagesPath": "C:\\Users\\pandr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\microservices\\CoreMicroservice\\obj\\",
+      "projectPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\microservices\\CoreMicroservice\\CoreMicroservice.csproj",
+      "packagesPath": "C:\\Users\\E4J2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\microservices\\CoreMicroservice\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\pandr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\E4J2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9623,15 +9616,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\pandr\\.nuget\\packages": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://bevyupnugetserver.azurewebsites.net/nuget": {}
+        "C:\\Users\\E4J2\\.nuget\\packages": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\pandr\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj": {
-              "projectPath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj"
+            "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj": {
+              "projectPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj"
             }
           }
         }
@@ -9644,6 +9637,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AspNetCore.HealthChecks.MongoDb": {
             "target": "Package",
@@ -9692,7 +9686,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

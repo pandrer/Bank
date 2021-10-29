@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pandr\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\BackendGateway.csproj": {}
+    "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\BackendGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pandr\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\BackendGateway.csproj": {
+    "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\BackendGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\BackendGateway.csproj",
+        "projectUniqueName": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\BackendGateway.csproj",
         "projectName": "BackendGateway",
-        "projectPath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\BackendGateway.csproj",
-        "packagesPath": "C:\\Users\\pandr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\obj\\",
+        "projectPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\BackendGateway.csproj",
+        "packagesPath": "C:\\Users\\E4J2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\gateways\\BackendGateway\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\pandr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\E4J2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,15 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\pandr\\.nuget\\packages": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://bevyupnugetserver.azurewebsites.net/nuget": {}
+          "C:\\Users\\E4J2\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\pandr\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj": {
-                "projectPath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj"
+              "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj": {
+                "projectPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj"
               }
             }
           }
@@ -46,6 +43,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AspNetCore.HealthChecks.MongoDb": {
               "target": "Package",
@@ -102,24 +100,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\pandr\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj": {
+    "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj",
+        "projectUniqueName": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj",
         "projectName": "Middleware",
-        "projectPath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj",
-        "packagesPath": "C:\\Users\\pandr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pandr\\source\\repos\\Bank\\src\\middlewares\\Middleware\\obj\\",
+        "projectPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\middlewares\\Middleware\\Middleware.csproj",
+        "packagesPath": "C:\\Users\\E4J2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\middlewares\\Middleware\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\pandr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\E4J2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -127,12 +122,12 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\pandr\\.nuget\\packages": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://bevyupnugetserver.azurewebsites.net/nuget": {}
+          "C:\\Users\\E4J2\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -144,6 +139,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore": {
               "target": "Package",
@@ -177,14 +173,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

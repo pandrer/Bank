@@ -27,8 +27,8 @@ namespace CatalogMicroservice.Repository
         public void UpdateCatalogItem(CatalogItem catalogItem) =>
             _col.UpdateOne(c => c.Id == catalogItem.Id, Builders<CatalogItem>.Update
                 .Set(c => c.Name, catalogItem.Name)
-                .Set(c => c.Description, catalogItem.Description)
-                .Set(c => c.Price, catalogItem.Price));
+                .Set(c => c.Value, catalogItem.Value)
+                .Set(c => c.Category, catalogItem.Category));
 
         public void DeleteCatalogItem(Guid catalogItemId) =>
             _col.DeleteOne(c => c.Id == catalogItemId);
