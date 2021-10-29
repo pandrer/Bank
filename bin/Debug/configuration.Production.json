@@ -1,5 +1,6 @@
 {
   "Routes": [
+    //catalog
     {
       "DownstreamPathTemplate": "/api/catalog",
       "DownstreamScheme": "http",
@@ -10,7 +11,7 @@
         }
       ],
       "UpstreamPathTemplate": "/catalog",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -26,12 +27,13 @@
         }
       ],
       "UpstreamPathTemplate": "/catalog/{id}",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       }
     },
+    //identity
     {
       "DownstreamPathTemplate": "/api/identity/login",
       "DownstreamScheme": "http",
@@ -42,18 +44,6 @@
         }
       ],
       "UpstreamPathTemplate": "/identity/login",
-      "UpstreamHttpMethod": [ "POST" ]
-    },
-    {
-      "DownstreamPathTemplate": "/api/identity/register",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "identity",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/identity/register",
       "UpstreamHttpMethod": [ "POST" ]
     },
     {
@@ -70,6 +60,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:44300"
+    "BaseUrl": "http://localhost:44359"
   }
 }

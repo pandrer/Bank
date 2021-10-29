@@ -16,3 +16,13 @@ C:\Users\pandr\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp
 C:\Users\pandr\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.csproj.CoreCompileInputs.cache
 C:\Users\pandr\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.dll
 C:\Users\pandr\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.pdb
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\bin\Debug\netcoreapp3.1\Middleware.deps.json
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\bin\Debug\netcoreapp3.1\Middleware.dll
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\bin\Debug\netcoreapp3.1\Middleware.pdb
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.csproj.AssemblyReference.cache
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.AssemblyInfoInputs.cache
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.AssemblyInfo.cs
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.csproj.CoreCompileInputs.cache
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.dll
+C:\Users\E4J2\source\repos\Bank\src\middlewares\Middleware\obj\Debug\netcoreapp3.1\Middleware.pdb
