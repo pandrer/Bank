@@ -10,10 +10,6 @@ services:
     ports:
       - "44326:80"
 
-  customer:
-    ports:
-      - "44398:80"
-
   core:
     ports:
       - "44399:80"

@@ -13,14 +13,6 @@ services:
     depends_on:
       - mongo
 
-  customer:
-    image: ${DOCKER_REGISTRY-}customer
-    build:
-      context: .
-      dockerfile: src/microservices/CustomersMicroservice/Dockerfile
-    depends_on:
-      - mongo
-
   core:
     image: ${DOCKER_REGISTRY-}core
     build:
