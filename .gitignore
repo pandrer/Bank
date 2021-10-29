@@ -3,3 +3,13 @@
 ################################################################################
 
 /bin/Debug
+/obj
+/src/gateways/BackendGateway/obj/Debug/netcoreapp3.1
+/src/gateways/FrontendGateway/obj/Debug/netcoreapp3.1
+/src/microservices/CatalogMicroservice/obj/Debug/netcoreapp3.1
+/src/microservices/CoreMicroservice/obj/Debug/netcoreapp3.1
+/src/microservices/CustomersMicroservice/obj/Debug/netcoreapp3.1
+/src/microservices/IdentityMicroservice/obj/Debug/netcoreapp3.1
+/src/middlewares/Middleware/obj/Debug/netcoreapp3.1
+/src/uis/Backend/obj/Debug/netcoreapp3.1
+/src/uis/Frontend/obj/Debug/netcoreapp3.1
