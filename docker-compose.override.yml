@@ -1,10 +1,11 @@
-version: "3.4"
+version: '3.4'
 
 services:
+
   mongo:
     image: mongo
     ports:
-       - "27017:27017"
+      - "27017:27017"
 
   catalog:
     ports:
@@ -29,3 +30,8 @@ services:
   backendgw:
     ports:
       - "44359:80"
+
+  envoygateway:
+    ports:
+      - "9902:9902"
+      - "10000:10000"

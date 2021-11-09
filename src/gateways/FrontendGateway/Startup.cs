@@ -1,8 +1,10 @@
+using FrontendGateway.Handlers;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
@@ -28,7 +30,8 @@ namespace FrontendGateway
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddOcelot(Configuration);
+            services.AddOcelot(Configuration)
+                .AddDelegatingHandler<MissingBodyDelegatingHandler>(true);
 
             var jwtSection = Configuration.GetSection("jwt");
             var jwtOptions = jwtSection.Get<JwtOptions>();
@@ -76,6 +79,12 @@ namespace FrontendGateway
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.Use((context, next) =>
+            {
+                context.Request.EnableBuffering();
+                return next();
+            });
 
             app.UseHealthChecks("/healthz", new HealthCheckOptions()
             {

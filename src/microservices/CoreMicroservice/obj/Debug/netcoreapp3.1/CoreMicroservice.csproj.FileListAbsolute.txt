@@ -194,9 +194,8 @@ C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\net
 C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\CoreMicroservice.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\CoreMicroservice.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\staticwebassets\CoreMicroservice.StaticWebAssets.Manifest.cache
-C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\staticwebassets\CoreMicroservice.StaticWebAssets.xml
-C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\scopedcss\bundle\CoreMicroservice.styles.css
 C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\CoreMicroservice.RazorTargetAssemblyInfo.cache
+C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\CoreMicroservice.csproj.CopyComplete
 C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\CoreMicroservice.dll
 C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\CoreMicroservice.pdb
 C:\Users\E4J2\source\repos\Bank\src\microservices\CoreMicroservice\obj\Debug\netcoreapp3.1\CoreMicroservice.genruntimeconfig.cache

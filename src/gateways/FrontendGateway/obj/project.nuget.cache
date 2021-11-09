@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9ZcJ2oNxnAPiAkNxYS3jUZ5EUlZhqp0vf6UUu45mEqG0hHrr0DrAWY3N8k/JqYChU7OSSzM2Tkr4MOow/0ABAg==",
+  "dgSpecHash": "gin+eyj0qj4h6fpPM18Ivigxj2lrRBCOeZkouu2I+0/vW+9ThXykezH4M522cRpPRybqvbj9LT5N6wABsmoA5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\gateways\\FrontendGateway\\FrontendGateway.csproj",
   "expectedPackageFiles": [
@@ -223,7 +223,8 @@
     "C:\\Users\\E4J2\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\E4J2\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\E4J2\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\E4J2\\.nuget\\packages\\yamldotnet\\6.0.0\\yamldotnet.6.0.0.nupkg.sha512"
+    "C:\\Users\\E4J2\\.nuget\\packages\\yamldotnet\\6.0.0\\yamldotnet.6.0.0.nupkg.sha512",
+    "C:\\Users\\E4J2\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
   ],
   "logs": []
 }

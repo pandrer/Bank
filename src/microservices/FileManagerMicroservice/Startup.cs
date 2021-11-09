@@ -1,3 +1,5 @@
+using FileManagerMicroservice.BLL;
+using FileManagerMicroservice.BLL.Contracts;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -26,6 +28,9 @@ namespace FileManagerMicroservice
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FileManager", Version = "v1" });
             });
+
+            services.AddTransient<IStorageBusiness, StorageBusiness>();
+
             services.AddHealthChecks();
             services.AddHealthChecksUI().AddInMemoryStorage();
         }

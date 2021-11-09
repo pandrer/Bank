@@ -1,7 +1,7 @@
 services:
   backendgw:
     build:
-      context: C:\Users\pandr\source\repos\Bank
+      context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/gateways/BackendGateway/Dockerfile
     depends_on:
       catalog:
@@ -16,7 +16,7 @@ services:
       target: 80
   catalog:
     build:
-      context: C:\Users\pandr\source\repos\Bank
+      context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/microservices/CatalogMicroservice/Dockerfile
     depends_on:
       mongo:
@@ -27,7 +27,7 @@ services:
       target: 80
   core:
     build:
-      context: C:\Users\pandr\source\repos\Bank
+      context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/microservices/CoreMicroservice/Dockerfile
     depends_on:
       mongo:
@@ -36,20 +36,34 @@ services:
     ports:
     - published: 44399
       target: 80
-  customer:
+  envoygateway:
     build:
-      context: C:\Users\pandr\source\repos\Bank
-      dockerfile: src/microservices/CustomersMicroservice/Dockerfile
+      context: C:\Users\E4J2\source\repos\Bank
+      dockerfile: src/gateways/Envoy/Dockerfile
     depends_on:
+      catalog:
+        condition: service_started
+      identity:
+        condition: service_started
       mongo:
         condition: service_started
-    image: customer
+    image: envoygateway
     ports:
-    - published: 44398
+    - published: 9902
+      target: 9902
+    - published: 10000
+      target: 10000
+  filemanager:
+    build:
+      context: C:\Users\E4J2\source\repos\Bank
+      dockerfile: src/microservices/FileManagerMicroservice/Dockerfile
+    image: filemanager
+    ports:
+    - published: 44391
       target: 80
   frontendgw:
     build:
-      context: C:\Users\pandr\source\repos\Bank
+      context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/gateways/FrontendGateway/Dockerfile
     depends_on:
       catalog:
@@ -64,7 +78,7 @@ services:
       target: 80
   identity:
     build:
-      context: C:\Users\pandr\source\repos\Bank
+      context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/microservices/IdentityMicroservice/Dockerfile
     depends_on:
       mongo:

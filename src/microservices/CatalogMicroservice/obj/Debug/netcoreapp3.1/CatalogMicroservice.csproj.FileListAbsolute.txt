@@ -295,8 +295,6 @@ C:\Users\E4J2\source\repos\Bank\src\microservices\CatalogMicroservice\obj\Debug\
 C:\Users\E4J2\source\repos\Bank\src\microservices\CatalogMicroservice\obj\Debug\netcoreapp3.1\CatalogMicroservice.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\E4J2\source\repos\Bank\src\microservices\CatalogMicroservice\obj\Debug\netcoreapp3.1\CatalogMicroservice.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\E4J2\source\repos\Bank\src\microservices\CatalogMicroservice\obj\Debug\netcoreapp3.1\staticwebassets\CatalogMicroservice.StaticWebAssets.Manifest.cache
-C:\Users\E4J2\source\repos\Bank\src\microservices\CatalogMicroservice\obj\Debug\netcoreapp3.1\staticwebassets\CatalogMicroservice.StaticWebAssets.xml
-C:\Users\E4J2\source\repos\Bank\src\microservices\CatalogMicroservice\obj\Debug\netcoreapp3.1\scopedcss\bundle\CatalogMicroservice.styles.css
 C:\Users\E4J2\source\repos\Bank\src\microservices\CatalogMicroservice\obj\Debug\netcoreapp3.1\CatalogMicroservice.RazorTargetAssemblyInfo.cache
 C:\Users\E4J2\source\repos\Bank\src\microservices\CatalogMicroservice\obj\Debug\netcoreapp3.1\CatalogMicroservice.csproj.CopyComplete
 C:\Users\E4J2\source\repos\Bank\src\microservices\CatalogMicroservice\obj\Debug\netcoreapp3.1\CatalogMicroservice.dll

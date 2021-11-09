@@ -295,8 +295,6 @@ C:\Users\E4J2\source\repos\Bank\src\microservices\IdentityMicroservice\obj\Debug
 C:\Users\E4J2\source\repos\Bank\src\microservices\IdentityMicroservice\obj\Debug\netcoreapp3.1\IdentityMicroservice.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\E4J2\source\repos\Bank\src\microservices\IdentityMicroservice\obj\Debug\netcoreapp3.1\IdentityMicroservice.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\E4J2\source\repos\Bank\src\microservices\IdentityMicroservice\obj\Debug\netcoreapp3.1\staticwebassets\IdentityMicroservice.StaticWebAssets.Manifest.cache
-C:\Users\E4J2\source\repos\Bank\src\microservices\IdentityMicroservice\obj\Debug\netcoreapp3.1\staticwebassets\IdentityMicroservice.StaticWebAssets.xml
-C:\Users\E4J2\source\repos\Bank\src\microservices\IdentityMicroservice\obj\Debug\netcoreapp3.1\scopedcss\bundle\IdentityMicroservice.styles.css
 C:\Users\E4J2\source\repos\Bank\src\microservices\IdentityMicroservice\obj\Debug\netcoreapp3.1\IdentityMicroservice.RazorTargetAssemblyInfo.cache
 C:\Users\E4J2\source\repos\Bank\src\microservices\IdentityMicroservice\obj\Debug\netcoreapp3.1\IdentityMicroservice.csproj.CopyComplete
 C:\Users\E4J2\source\repos\Bank\src\microservices\IdentityMicroservice\obj\Debug\netcoreapp3.1\IdentityMicroservice.dll

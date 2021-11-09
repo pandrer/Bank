@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "HgHYJRzjJAAL9/q/rGxa3CWsjw/LWbcsD89Hpc8RrXLRb9/M6ZYgtVwi9KDFo9NShYYU+ke1EQ8aX0RFGnPeRg==",
+  "dgSpecHash": "YXIsy4CjNdRCsbV+kbfmd6LOTUCgwpPILmIqJb5vOfwoqZLUonObBziugiU1gB2yxX1QPNkBwC5GgM09WNwqQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\uis\\Frontend\\Frontend.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\E4J2\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+    "C:\\Users\\E4J2\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "C:\\Users\\E4J2\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
   ],
   "logs": []
 }
