@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "7d94619c-8d08-48b1-b644-a8a07c6838f8",
+		"name": "Arch Project Envoy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Gateway",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "token",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"promeroI@test.com\",\r\n    \"password\": \"Pa$$w0rd\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/sso/Identity/login?d=frontend",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"sso",
+										"Identity",
+										"login"
+									],
+									"query": [
+										{
+											"key": "d",
+											"value": "frontend"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate token",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/sso/Identity/validate?email=promeroI%40test.com&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1NWYyN2VmOC01OWIwLTQ5NGMtYmM1YS0yYTliMzdjNzQ4NjIiLCJleHAiOjE2MzUzNjQyNDJ9.QhU6ezg_tg56ahEr2uj4d5LOlyUSq0myiz-GwW-P9Nw",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"sso",
+										"Identity",
+										"validate"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "promeroI%40test.com"
+										},
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1NWYyN2VmOC01OWIwLTQ5NGMtYmM1YS0yYTliMzdjNzQ4NjIiLCJleHAiOjE2MzUzNjQyNDJ9.QhU6ezg_tg56ahEr2uj4d5LOlyUSq0myiz-GwW-P9Nw"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"promeroV@uniminuto.edu.co\",\r\n    \"password\": \"Pa$$II\",\r\n    \"salt\": \"Contador\",\r\n    \"isAdmin\": true\r\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/sso/Identity/register",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"sso",
+										"Identity",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Catalog",
+					"item": [
+						{
+							"name": "catalog",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/catlg/catalog",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"catlg",
+										"catalog"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "catalog",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"option II\",\r\n    \"description\": \"test description\",\r\n    \"price\": 500\r\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/catlg/catalog",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"catlg",
+										"catalog"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Core",
+					"item": [
+						{
+							"name": "Radicator",
+							"item": [
+								{
+									"name": "Get all register files",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl}}/cr/radicator",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"cr",
+												"radicator"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Post register files Copy",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"Id\": \"{{$guid}}\",\r\n  \"status\": \"pendiente\",\r\n  \"state\": \"{{$randomCountry}}\",\r\n  \"city\": \"{{$randomCity}}\",\r\n  \"description\": \"{{$randomCatchPhraseDescriptor}}\",\r\n  \"sender\": \"dromerogar1\",\r\n  \"receiver\": \"promerogar1\",\r\n  \"courier\": \"lozada aldaban\",\r\n  \"documentPath\": \"{{$randomFilePath}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl}}/cr/radicator",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"cr",
+												"radicator"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete register file by id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl}}/cr/radicator/:id",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"cr",
+												"radicator",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3fa85f64-5757-4562-b8fc-2c963f66afa6"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get all register file by id Copy",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseurl}}/cr/radicator",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"cr",
+												"radicator"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "FileManager",
+					"item": [
+						{
+							"name": "file",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"contentType": "application/json",
+											"type": "file",
+											"src": "/C:/Users/E4J2/Downloads/migration.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/strg/storage",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"strg",
+										"storage"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1NWYyN2VmOC01OWIwLTQ5NGMtYmM1YS0yYTliMzdjNzQ4NjIiLCJleHAiOjE2MzUzNjQyNDJ9.QhU6ezg_tg56ahEr2uj4d5LOlyUSq0myiz-GwW-P9Nw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://localhost:5202"
+		}
+	]
+}
