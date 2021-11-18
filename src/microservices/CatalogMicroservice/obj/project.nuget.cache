@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AuB4VT9XjJiFo+4rUnLNAqOWYu7IKskMmjNoA+swaaRzjopcfkL126FGiFceotyFYTfDWy2PNVdOkEaKXLUfbQ==",
+  "dgSpecHash": "vEVL8/MGLCH3P4wjCtKlpGoAuGm1qheUf6Y80xeRpS0Uver71d6UcGnIwTRy9KddS917fN+xZs+0CoULrjRslw==",
   "success": true,
   "projectFilePath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\microservices\\CatalogMicroservice\\CatalogMicroservice.csproj",
   "expectedPackageFiles": [
@@ -214,8 +214,7 @@
     "C:\\Users\\E4J2\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\E4J2\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\E4J2\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\E4J2\\.nuget\\packages\\yamldotnet\\6.0.0\\yamldotnet.6.0.0.nupkg.sha512",
-    "C:\\Users\\E4J2\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+    "C:\\Users\\E4J2\\.nuget\\packages\\yamldotnet\\6.0.0\\yamldotnet.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

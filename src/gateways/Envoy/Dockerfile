@@ -1,1 +1,1 @@
-FROM envoyproxy/envoy-dev:7351734f6076152ccdad2c8630e3c3760b7ec38e
+FROM envoyproxy/envoy-dev:8a6388df7a4ca2e5b55c2bcf5134675ab7fb77a1

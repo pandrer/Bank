@@ -1,20 +1,5 @@
 services:
-  backendgw:
-    build:
-      context: C:\Users\E4J2\source\repos\Bank
-      dockerfile: src/gateways/BackendGateway/Dockerfile
-    depends_on:
-      catalog:
-        condition: service_started
-      identity:
-        condition: service_started
-      mongo:
-        condition: service_started
-    image: backendgw
-    ports:
-    - published: 44359
-      target: 80
-  catalog:
+  catalog-api:
     build:
       context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/microservices/CatalogMicroservice/Dockerfile
@@ -25,7 +10,7 @@ services:
     ports:
     - published: 44326
       target: 80
-  core:
+  core-api:
     build:
       context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/microservices/CoreMicroservice/Dockerfile
@@ -34,49 +19,36 @@ services:
         condition: service_started
     image: core
     ports:
-    - published: 44399
+    - published: 44327
       target: 80
   envoygateway:
     build:
       context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/gateways/Envoy/Dockerfile
     depends_on:
-      catalog:
+      catalog-api:
         condition: service_started
-      identity:
+      identity-api:
         condition: service_started
       mongo:
         condition: service_started
     image: envoygateway
     ports:
-    - published: 9902
-      target: 9902
-    - published: 10000
-      target: 10000
-  filemanager:
+    - published: 5202
+      target: 80
+    - published: 15202
+      target: 8001
+    volumes:
+    - C:\Users\E4J2\source\repos\Bank\src\gateways\Envoy:/etc/envoy:rw
+  filemanager-api:
     build:
       context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/microservices/FileManagerMicroservice/Dockerfile
     image: filemanager
     ports:
-    - published: 44391
+    - published: 44328
       target: 80
-  frontendgw:
-    build:
-      context: C:\Users\E4J2\source\repos\Bank
-      dockerfile: src/gateways/FrontendGateway/Dockerfile
-    depends_on:
-      catalog:
-        condition: service_started
-      identity:
-        condition: service_started
-      mongo:
-        condition: service_started
-    image: frontendgw
-    ports:
-    - published: 44300
-      target: 80
-  identity:
+  identity-api:
     build:
       context: C:\Users\E4J2\source\repos\Bank
       dockerfile: src/microservices/IdentityMicroservice/Dockerfile
@@ -85,10 +57,10 @@ services:
         condition: service_started
     image: identity
     ports:
-    - published: 44397
+    - published: 44329
       target: 80
   mongo:
-    container_name: store.mongo
+    container_name: mongo.bank
     image: mongo
     ports:
     - published: 27017

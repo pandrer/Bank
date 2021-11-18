@@ -3,9 +3,9 @@ version: "3.4"
 services:
   mongo:
     image: mongo
-    container_name: store.mongo
+    container_name: mongo.bank
 
-  catalog:
+  catalog-api:
     image: ${DOCKER_REGISTRY-}catalog
     build:
       context: .
@@ -13,7 +13,7 @@ services:
     depends_on:
       - mongo
 
-  core:
+  core-api:
     image: ${DOCKER_REGISTRY-}core
     build:
       context: .
@@ -21,40 +21,20 @@ services:
     depends_on:
       - mongo
 
-  filemanager:
+  filemanager-api:
     image: ${DOCKER_REGISTRY-}filemanager
     build:
       context: .
       dockerfile: src/microservices/FileManagerMicroservice/Dockerfile
 
 
-  identity:
+  identity-api:
     image: ${DOCKER_REGISTRY-}identity
     build:
       context: .
       dockerfile: src/microservices/IdentityMicroservice/Dockerfile
     depends_on:
       - mongo
-
-  frontendgw:
-    image: ${DOCKER_REGISTRY-}frontendgw
-    build:
-      context: .
-      dockerfile: src/gateways/FrontendGateway/Dockerfile
-    depends_on:
-      - mongo
-      - catalog
-      - identity
-
-  backendgw:
-    image: ${DOCKER_REGISTRY-}backendgw
-    build:
-      context: .
-      dockerfile: src/gateways/BackendGateway/Dockerfile
-    depends_on:
-      - mongo
-      - catalog
-      - identity
 
   envoygateway:
     image: ${DOCKER_REGISTRY-}envoygateway
@@ -63,5 +43,5 @@ services:
       dockerfile: src/gateways/Envoy/Dockerfile
     depends_on:
       - mongo
-      - catalog
-      - identity
+      - catalog-api
+      - identity-api

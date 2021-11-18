@@ -7,31 +7,25 @@ services:
     ports:
       - "27017:27017"
 
-  catalog:
+  catalog-api:
     ports:
       - "44326:80"
 
-  core:
+  core-api:
     ports:
-      - "44399:80"
+      - "44327:80"
 
-  filemanager:
+  filemanager-api:
     ports:
-      - "44391:80"
+      - "44328:80"
 
-  identity:
+  identity-api:
     ports:
-      - "44397:80"
-
-  frontendgw:
-    ports:
-      - "44300:80"
-
-  backendgw:
-    ports:
-      - "44359:80"
+      - "44329:80"
 
   envoygateway:
+    volumes:
+      - ./src/gateways/Envoy:/etc/envoy
     ports:
-      - "9902:9902"
-      - "10000:10000"
+      - "5202:80"
+      - "15202:8001"

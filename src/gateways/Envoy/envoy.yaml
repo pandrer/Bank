@@ -2,7 +2,7 @@ admin:
   address:
     socket_address:
       address: 0.0.0.0
-      port_value: 9902
+      port_value: 8001
 
 static_resources:
 
@@ -11,7 +11,7 @@ static_resources:
     address:
       socket_address:
         address: 0.0.0.0
-        port_value: 10000
+        port_value: 80
     filter_chains:
     - filters:
       - name: envoy.filters.network.http_connection_manager
@@ -31,27 +31,85 @@ static_resources:
               domains: ["*"]
               routes:
               - match:
-                  prefix: "/"
+                  prefix: "/catlg"
                 route:
-                  host_rewrite_literal: www.envoyproxy.io
-                  cluster: service_envoyproxy_io
+                  prefix_rewrite: /api
+                  cluster: service_catalog
+              - match:
+                  prefix: "/cr"
+                route:
+                  prefix_rewrite: /api
+                  cluster: service_core
+              - match:
+                  prefix: "/strg"
+                route:
+                  prefix_rewrite: /api
+                  cluster: service_filemanager
+              - match:
+                  prefix: "/sso"
+                route:
+                  prefix_rewrite: /api
+                  cluster: service_identity
+
 
   clusters:
-  - name: service_envoyproxy_io
+
+  - name: service_catalog
+    connect_timeout: 0.25s
     type: LOGICAL_DNS
-    # Comment out the following line to test on v6 networks
     dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
     load_assignment:
-      cluster_name: service_envoyproxy_io
+      cluster_name: service_catalog
       endpoints:
       - lb_endpoints:
         - endpoint:
             address:
               socket_address:
-                address: www.envoyproxy.io
-                port_value: 443
-    transport_socket:
-      name: envoy.transport_sockets.tls
-      typed_config:
-        "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext
-        sni: www.envoyproxy.io
+                address: catalog-api
+                port_value: 80
+
+  - name: service_core
+    connect_timeout: 0.25s
+    type: LOGICAL_DNS
+    dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: service_core
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                address: core-api
+                port_value: 80
+
+  - name: service_filemanager
+    connect_timeout: 0.25s
+    type: LOGICAL_DNS
+    dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: service_filemanager
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                address: filemanager-api
+                port_value: 80
+
+  - name: service_identity
+    connect_timeout: 0.25s
+    type: LOGICAL_DNS
+    dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: service_identity
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                address: identity-api
+                port_value: 80

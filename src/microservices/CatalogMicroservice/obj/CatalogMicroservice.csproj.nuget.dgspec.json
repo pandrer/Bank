@@ -13,6 +13,9 @@
         "packagesPath": "C:\\Users\\E4J2\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\microservices\\CatalogMicroservice\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\E4J2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -21,6 +24,8 @@
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Users\\E4J2\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {},
           "https://artifactory.nordstrom.com/artifactory/api/nuget/v3/nuget": {}
         },
         "frameworks": {
@@ -82,12 +87,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.21, 3.1.21]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -109,6 +108,9 @@
         "packagesPath": "C:\\Users\\E4J2\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\E4J2\\source\\repos\\Bank\\src\\middlewares\\Middleware\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\E4J2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -117,6 +119,8 @@
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Users\\E4J2\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {},
           "https://artifactory.nordstrom.com/artifactory/api/nuget/v3/nuget": {}
         },
         "frameworks": {

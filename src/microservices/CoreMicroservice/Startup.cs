@@ -27,7 +27,7 @@ namespace CoreMicroservice
         {
             services.AddControllers();
             services.AddMongoDb(Configuration);
-            services.AddSingleton<ICoreRepository>(sp => new CoreRepository(sp.GetService<IMongoDatabase>()));
+            services.AddSingleton<IRadicatorRepository>(sp => new RadicatorRepository(sp.GetService<IMongoDatabase>()));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Core", Version = "v1" });
