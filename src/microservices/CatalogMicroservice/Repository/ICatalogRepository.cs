@@ -11,5 +11,6 @@ namespace CatalogMicroservice.Repository
         void InsertCatalogItem(CatalogItem catalogItem);
         void UpdateCatalogItem(CatalogItem catalogItem);
         void DeleteCatalogItem(Guid catalogItemId);
+        List<CatalogItem> GetCatalogItemsByCategoryId(Guid categoryItemId, string parent);
     }
 }

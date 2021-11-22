@@ -26,8 +26,10 @@ namespace CatalogMicroservice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddRouting(options => options.LowercaseUrls = true);
             services.AddMongoDb(Configuration);
             services.AddSingleton<ICatalogRepository>(sp => new CatalogRepository(sp.GetService<IMongoDatabase>()));
+            services.AddSingleton<ICategoryRepository>(sp => new CategoryRepository(sp.GetService<IMongoDatabase>()));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog", Version = "v1" });

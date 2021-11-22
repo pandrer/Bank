@@ -21,5 +21,11 @@
     <ProjectReference Include="..\..\middlewares\Middleware\Middleware.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Setup\CountryStateCity\countriesStatesCities.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 
 </Project>

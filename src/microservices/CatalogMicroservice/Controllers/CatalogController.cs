@@ -13,10 +13,12 @@ namespace CatalogMicroservice.Controllers
     public class CatalogController : ControllerBase
     {
         private readonly ICatalogRepository _catalogRepository;
+        private readonly ICategoryRepository _categoryRepository;
 
-        public CatalogController(ICatalogRepository catalogRepository)
+        public CatalogController(ICatalogRepository catalogRepository, ICategoryRepository categoryRepository)
         {
             _catalogRepository = catalogRepository;
+            _categoryRepository = categoryRepository;
         }
 
         // GET: api/<CatalogController>
@@ -32,6 +34,13 @@ namespace CatalogMicroservice.Controllers
         public ActionResult<CatalogItem> Get(Guid id)
         {
             var catalogItem = _catalogRepository.GetCatalogItem(id);
+            return Ok(catalogItem);
+        }
+
+        [HttpGet("/category/{categoryId}")]
+        public ActionResult<CatalogItem> GetCategory(Guid categoryId, [FromQuery] string parent = null)
+        {
+            var catalogItem = _catalogRepository.GetCatalogItemsByCategoryId(categoryId, parent);
             return Ok(catalogItem);
         }
 
@@ -61,6 +70,13 @@ namespace CatalogMicroservice.Controllers
         {
             _catalogRepository.DeleteCatalogItem(id);
             return new OkResult();
+        }
+
+        [HttpGet("categories")]
+        public ActionResult<IEnumerable<CategoryItem>> GetCategories()
+        {
+            var categoryItems = _categoryRepository.GetCategories();
+            return Ok(categoryItems);
         }
     }
 }

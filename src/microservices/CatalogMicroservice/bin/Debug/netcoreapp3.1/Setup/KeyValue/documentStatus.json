@@ -1,0 +1,9 @@
+{
+  "01": "Ok",
+  "02": "Rechazado por posible fraude",
+  "03": "Rechazado por mal ingreso",
+  "04": "Duplicado",
+  "05": "Error de despacho(faltó gestión)",
+  "06": "Reenvio Falla",
+  "07": "Error del Sistema"
+}

@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\microservices",
+    "\\src\\microservices\\CoreMicroservice",
+    "\\src\\microservices\\CoreMicroservice\\Controllers",
+    "\\src\\microservices\\CoreMicroservice\\Repository"
   ],
-  "SelectedNode": "\\Bank.sln",
+  "SelectedNode": "\\src\\microservices\\CoreMicroservice\\Repository\\RadicatorRepository.cs",
   "PreviewInSolutionExplorer": false
 }
